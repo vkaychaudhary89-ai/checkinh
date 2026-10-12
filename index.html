@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek Kumar | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <div class="container">
+        <!-- Header / Hero Section -->
+        <header class="hero">
+            <span class="badge">Available for Projects & Collaboration</span>
+            <h1>Hi, I'm <span class="highlight">Vivek Kumar</span>.</h1>
+            <p class="subtitle">B.Tech CSE Student | Content Creator | Tech Enthusiast</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Contact Me</a>
+                <a href="#projects" class="btn btn-secondary">View Work</a>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="card">
+                <p>
+                    Main <strong>Delhi Institute of Engineering and Technology</strong> se Computer Science Engineering me <strong>B.Tech 3rd Year</strong> ka student hun. 
+                    Mujhe programming, software development aur content creation ka bohot shauk hai. 
+                    Main regularly 5 se 6 platforms par video editing, AI prompts aur tech content share karta hun.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-pill">Python</div>
+                <div class="skill-pill">Java</div>
+                <div class="skill-pill">Advanced Excel</div>
+                <div class="skill-pill">Video Editing</div>
+                <div class="skill-pill">AI Prompt Engineering</div>
+                <div class="skill-pill">AI Video Creation</div>
+                <div class="skill-pill">Content Strategy</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+                <div class="card project-card">
+                    <div class="project-badge">Featured Project</div>
+                    <h3>Cursor Tracker & Trail</h3>
+                    <p>
+                        Ek smooth interactive cursor tracking program jisme visual tracker mouse cursor ke pichhe real-time fluid animation ke sath chalta hai.
+                    </p>
+                    <div class="tech-tags">
+                        <span>JavaScript</span>
+                        <span>CSS Animations</span>
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-badge">Content Creation</div>
+                    <h3>Multi-Platform AI Content Pipeline</h3>
+                    <p>
+                        Daily short-form aur long-form tech videos ke liye automated AI workflows, high-quality prompts aur viral content generation system.
+                    </p>
+                    <div class="tech-tags">
+                        <span>AI Video Tools</span>
+                        <span>Prompt Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="card contact-card">
+                <h2>Let's build something great.</h2>
+                <p>Kissi project, collaboration ya opportunity ke liye connect karein.</p>
+                <div class="contact-links">
+                    <a href="mailto:vivekkumar@example.com" class="btn btn-primary">Email Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Vivek Kumar. Built with code & passion.</p>
+        </footer>
+    </div>
+
+    <!-- Mouse Tracking Script -->
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Hover effect for buttons and links
+        const interactiveElements = document.querySelectorAll('a, button, .skill-pill, .card');
+        interactiveElements.forEach((el) => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.6)';
+                cursor.style.backgroundColor = '#00f2fe';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.backgroundColor = '#ffffff';
+            });
+        });
+    </script>
+</body>
+</html>
